@@ -1,12 +1,13 @@
-<template lang="jade">
-  div.homepage
-    p Home Page
-    div.content
-      h3 {{ $t("message.hello") }}
-      input(v-model="username" v-bind:placeholder="this.$t('message.placeholder')")
-      p {{welcomeMessage}}
-    //- router-link(:to="{ name: 'about'}") link to About
-    a(@click="goto") link to About
+<template >
+  <div class="homepage">
+
+    <div class="content">
+      <h3> {{ $t("message.hello") }}</h3>
+      <input v-model="username" v-bind:placeholder="this.$t('message.placeholder')">
+      <p> {{welcomeMessage}}</p>
+    <span @click="goto"> link to About</span>
+    </div>
+    </div>
 </template>
 
 <script type="es6">
@@ -33,11 +34,12 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang='sass'>
-input
+<style scoped>
+input{
   border: solid 1px grey;
   width: 200px;
   height: 2em;
   padding-left: 5px;
   font-size: 13px;
+  }
 </style>

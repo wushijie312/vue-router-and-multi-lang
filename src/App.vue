@@ -1,12 +1,11 @@
-<template lang="jade">
-  #app
-    //-header-
-    HeadTop(@changeAppLocale="changeAppLocale" v-bind:lang="lang")
-    //-main-
-    div.main
-      router-view(v-bind:lang="lang" )
-    //-footer-
-    FooterBottom
+<template>
+  <div id="app">
+    <head-top @changeAppLocale="changeAppLocale" v-bind:lang="lang">HeadTop </head-top>
+    <div class="main">
+      <router-view v-bind:lang="lang"></router-view>
+    </div>
+    <footer-bottom></footer-bottom>
+    </div>
 </template>
 
 <script type="es6">
@@ -40,7 +39,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
-  @import './style/common.sass';
+<style scoped>
+  @import './style/common.css';
   
 </style>
